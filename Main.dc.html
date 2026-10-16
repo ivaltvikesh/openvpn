@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>iVALT for OpenVPN Access Server</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5F6F8}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+</style>
+</helmet>
+<div style="font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #0E1726; background: #F5F6F8; font-size: 16px; line-height: 1.55">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #E3E6EB">
+<nav style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.02em">iVALT</div>
+<div style="font-size: 13px; color: #4A5568; padding: 4px 10px; border: 1px solid #D5DAE1; border-radius: 999px">for OpenVPN Access Server</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px">
+<a href="#how" style="color: #0E1726; text-decoration: none">How it works</a>
+<a href="#setup" style="color: #0E1726; text-decoration: none">Setup</a>
+<a href="#faq" style="color: #0E1726; text-decoration: none">FAQs</a>
+<a href="#setup" style="background: {{accent}}; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: 600">Get started</a>
+</div>
+</nav>
+</header>
+
+<section style="background: #0E1726; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px">
+<div style="max-width: 760px; display: flex; flex-direction: column; gap: 24px">
+<div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #93B4FF">OpenVPN Access Server × iVALT</div>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 56px; line-height: 1.05; letter-spacing: -0.03em; font-weight: 700">Every VPN login, authorized cryptographically by a trusted human.</h1>
+<p style="margin: 0; font-size: 19px; color: #C9D2E0; max-width: 600px">iVALT adds a 1-click human authorization to every login and digital transaction—helping prevent stolen credentials, unauthorized access, and identity impersonation.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<a href="#setup" style="background: {{accent}}; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 8px; font-weight: 600; font-size: 17px">Get started — 90 days free</a>
+<a href="https://openvpn.net/as-docs/v3/tutorials/tutorial--ivalt-2fa-access-server.html" style="color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 8px; font-weight: 600; font-size: 17px; border: 1px solid #44516A">Watch the setup video</a>
+</div>
+<div style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #C9D2E0">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7DD3A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+<span>Featured in the official OpenVPN Access Server documentation</span>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border-bottom: 1px solid #E3E6EB">
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start">
+<h2 style="margin: 0; flex: 1 1 280px; font-family: 'Space Grotesk', sans-serif; font-size: 28px; line-height: 1.2; letter-spacing: -0.02em">What is iVALT?</h2>
+<p style="margin: 0; flex: 2 1 520px; font-size: 18px; color: #2D3748">Before access is granted, the real, verified user approves the request on their registered phone with Face ID or fingerprint. iVALT then checks the device, location and time rules your admin sets, so stolen credentials alone never get anyone in.</p>
+</div>
+</section>
+
+<section>
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 720px">
+<div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">Why iVALT</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">A stolen credential is useless.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 11c0 3-1 6-3 8"></path><path d="M8 11a4 4 0 0 1 8 0c0 2-.3 4-1 6"></path><path d="M5 12a7 7 0 0 1 14-1"></path><path d="M16 21c.6-1 1-2.2 1.3-3.5"></path></svg>
+<h3 style="margin: 0; font-size: 19px; font-weight: 600">Verified human authorization</h3>
+<p style="margin: 0; color: #4A5568">Every VPN connection is approved by the real user on their registered phone with Face ID or fingerprint.</p>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"></circle><path d="M11 12l9-9"></path><path d="M17 6l3 3"></path><path d="M15 8l2 2"></path></svg>
+<h3 style="margin: 0; font-size: 19px; font-weight: 600">PKI-backed identity</h3>
+<p style="margin: 0; color: #4A5568">Identity is bound to the user's registered device with cryptographic keys, so a stolen password alone can't open the VPN.</p>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px"><h3 style="margin: 0; font-size: 19px; font-weight: 600">Time windows</h3><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #1E3A8A; background: #E8EEFF; padding: 3px 8px; border-radius: 999px">Enterprise</span></div>
+<p style="margin: 0; color: #4A5568">Allow access only during set hours per user, for example 8 AM to 4 PM in their time zone.</p>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px"><h3 style="margin: 0; font-size: 19px; font-weight: 600">Geofencing</h3><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #1E3A8A; background: #E8EEFF; padding: 3px 8px; border-radius: 999px">Enterprise</span></div>
+<p style="margin: 0; color: #4A5568">Block logins from outside approved locations, even when the username and password are correct.</p>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7V3"></path><path d="M15 7V3"></path><path d="M6 7h12v4a6 6 0 0 1-12 0V7z"></path><path d="M12 17v4"></path></svg>
+<h3 style="margin: 0; font-size: 19px; font-weight: 600">Works with your current login</h3>
+<p style="margin: 0; color: #4A5568">Adds a human authorization step after your existing local, PAM, LDAP or RADIUS login. No migration, no new identity store. 1-click and much stronger than 2FA digits.</p>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"></circle><path d="M2 21c0-3.9 3.1-7 7-7"></path><path d="M15 17l2 2 4-4"></path></svg>
+<h3 style="margin: 0; font-size: 19px; font-weight: 600">Stops identity impersonation</h3>
+<p style="margin: 0; color: #4A5568">Approval is tied to the user's biometric and registered device, so stolen credentials alone cannot provide access.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="how" style="background: #FFFFFF; border-top: 1px solid #E3E6EB; border-bottom: 1px solid #E3E6EB">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
+<div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">How it works</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Approve access authority in real-time. 1-click ensures the right human.</h2>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px">
+<li style="display: flex; flex-direction: column; gap: 10px; padding-top: 16px; border-top: 2px solid #0E1726"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #4A5568">01</span><span style="font-weight: 500">User connects and passes the normal Access Server login.</span></li>
+<li style="display: flex; flex-direction: column; gap: 10px; padding-top: 16px; border-top: 2px solid #0E1726"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #4A5568">02</span><span style="font-weight: 500">Access Server calls iVALT over a secure HTTPS API.</span></li>
+<li style="display: flex; flex-direction: column; gap: 10px; padding-top: 16px; border-top: 2px solid #0E1726"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #4A5568">03</span><span style="font-weight: 500">iVALT sends an authorization request to the user's registered phone.</span></li>
+<li style="display: flex; flex-direction: column; gap: 10px; padding-top: 16px; border-top: 2px solid #0E1726"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #4A5568">04</span><span style="font-weight: 500">User approves with Face ID or fingerprint within 60 seconds.</span></li>
+<li style="display: flex; flex-direction: column; gap: 10px; padding-top: 16px; border-top: 2px dashed #A0AEC0"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #4A5568">05 · Optional</span><span style="font-weight: 500">iVALT checks the geofence and time window.</span></li>
+<li style="display: flex; flex-direction: column; gap: 10px; padding-top: 16px; border-top: 2px solid {{accent}}"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: {{accent}}">06</span><span style="font-weight: 600">Access Server grants or denies the connection.</span></li>
+</ol>
+</div>
+</section>
+
+<section id="setup">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 720px">
+<div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">Setup</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Live in three steps.</h2>
+<p style="margin: 0; color: #4A5568; font-size: 17px">You need an installed Access Server and root (SSH) console access. Free for 90 days.</p>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: {{accent}}; font-weight: 500">STEP 1</div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 28px; letter-spacing: -0.01em">Register users in the iVALT app</h3>
+<ol style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; color: #2D3748; max-width: 760px">
+<li>Download the iVALT app on Android or iOS.</li>
+<li>Register with the <strong>same email</strong> used for the VPN account, and set up biometrics.</li>
+</ol>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
+<a href="https://play.google.com/store/apps/details?id=com.abisyscorp.ivalt&amp;hl=en_IN" style="display: inline-flex; align-items: center; gap: 10px; background: #0E1726; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 10px; font-weight: 600; min-height: 44px; box-sizing: border-box">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5v17l14-8.5L5 3.5z"></path></svg>
+Get it on Google Play</a>
+<a href="https://apps.apple.com/in/app/ivalt/id1507945806" style="display: inline-flex; align-items: center; gap: 10px; background: #0E1726; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 10px; font-weight: 600; min-height: 44px; box-sizing: border-box">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg>
+Download on the App Store</a>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: {{accent}}; font-weight: 500">STEP 2</div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 28px; letter-spacing: -0.01em">Get your iVALT API key</h3>
+<ol style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 10px; color: #2D3748; max-width: 760px">
+<li>Open the <a href="https://api-keys.ivalt.com">iVALT Developer Portal</a>.</li>
+<li>Enter the phone number registered in your iVALT app and select <strong>Continue</strong>.</li>
+<li>Approve the sign-in on your phone with 1 click.</li>
+<li>Copy your API key from the portal. It's free and valid for 90 days.</li>
+</ol>
+<div style="padding-top: 8px">
+<a href="https://api-keys.ivalt.com" style="display: inline-block; background: {{accent}}; color: #FFFFFF; text-decoration: none; padding: 14px 24px; border-radius: 8px; font-weight: 600">Open the Developer Portal</a>
+</div>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 20px">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: {{accent}}; font-weight: 500">STEP 3</div>
+<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 28px; letter-spacing: -0.01em">Connect iVALT to Access Server</h3>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-weight: 600">1. Clone the integration script</div>
+<div style="background: #0E1726; color: #E2E8F0; border-radius: 10px; padding: 16px 20px; overflow-x: auto; font-family: 'IBM Plex Mono', monospace; font-size: 14px; white-space: pre">git clone https://github.com/iVALT-Inc/openvpn-ivalt-2fa.git</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-weight: 600">2. Add your API key in <code style="font-family: 'IBM Plex Mono', monospace; background: #EEF1F5; padding: 2px 6px; border-radius: 4px">openvpn-ivalt-2fa/main.py</code></div>
+<div style="background: #0E1726; color: #E2E8F0; border-radius: 10px; padding: 16px 20px; overflow-x: auto; font-family: 'IBM Plex Mono', monospace; font-size: 14px; white-space: pre">IVALT_SECRET_KEY = "&lt;your_ivalt_secret_key&gt;"</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-weight: 600">3. Load the script and restart Access Server</div>
+<div style="background: #0E1726; color: #E2E8F0; border-radius: 10px; padding: 16px 20px; overflow-x: auto; font-family: 'IBM Plex Mono', monospace; font-size: 14px; white-space: pre">sacli --key "auth.module.post_auth_script" --value_file="/root/openvpn-ivalt-2fa/main.py" ConfigPut
+sacli start</div>
+</div>
+
+<div style="font-weight: 600">4. Test with one enrolled user and one who hasn't enrolled yet.</div>
+
+<div style="display: flex; gap: 14px; align-items: flex-start; background: #FFF7ED; border: 1px solid #FDBA74; border-radius: 10px; padding: 16px 20px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A3412" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M12 3l10 18H2L12 3z"></path><path d="M12 10v5"></path><path d="M12 18h.01"></path></svg>
+<div style="color: #7C2D12"><strong>Turn off Access Server's built-in TOTP MFA first.</strong> Running both at once causes login failures.</div>
+</div>
+
+<div style="color: #4A5568">Full guide and video: <a href="https://openvpn.net/as-docs/v3/tutorials/tutorial--ivalt-2fa-access-server.html">OpenVPN's official iVALT integration guide</a> · Source: <a href="https://github.com/iVALT-Inc/openvpn-ivalt-2fa">GitHub</a></div>
+</div>
+</div>
+</section>
+
+<section id="faq" style="background: #FFFFFF; border-top: 1px solid #E3E6EB">
+<div style="max-width: 880px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">FAQs</div>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Questions, answered</h2>
+</div>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #E3E6EB">
+
+<details open="" style="border-bottom: 1px solid #E3E6EB; padding: 20px 0">
+<summary style="font-size: 18px; font-weight: 600; display: flex; justify-content: space-between; gap: 16px; min-height: 44px; align-items: center">How do I get the API key for the integration?<span aria-hidden="true" style="color: {{accent}}; font-size: 22px">+</span></summary>
+<p style="margin: 12px 0 0; color: #4A5568">First download the iVALT app and register. Then sign in to the <a href="https://api-keys.ivalt.com">iVALT Developer Portal</a> with the phone number registered in the app, approve the sign-in on your phone, and copy your API key. Add it to <code style="font-family: 'IBM Plex Mono', monospace; background: #EEF1F5; padding: 2px 6px; border-radius: 4px">main.py</code> as shown in Step 3.</p>
+</details>
+
+<details style="border-bottom: 1px solid #E3E6EB; padding: 20px 0">
+<summary style="font-size: 18px; font-weight: 600; display: flex; justify-content: space-between; gap: 16px; min-height: 44px; align-items: center">How much does the API key cost?<span aria-hidden="true" style="color: {{accent}}; font-size: 22px">+</span></summary>
+<p style="margin: 12px 0 0; color: #4A5568">The API key is free for 90 days.</p>
+</details>
+
+<details style="border-bottom: 1px solid #E3E6EB; padding: 20px 0">
+<summary style="font-size: 18px; font-weight: 600; display: flex; justify-content: space-between; gap: 16px; min-height: 44px; align-items: center">How long is the API key valid for?<span aria-hidden="true" style="color: {{accent}}; font-size: 22px">+</span></summary>
+<p style="margin: 12px 0 0; color: #4A5568">Each API key is valid for 90 days.</p>
+</details>
+
+<details style="border-bottom: 1px solid #E3E6EB; padding: 20px 0">
+<summary style="font-size: 18px; font-weight: 600; display: flex; justify-content: space-between; gap: 16px; min-height: 44px; align-items: center">Where do I configure the geofence and time restrictions?<span aria-hidden="true" style="color: {{accent}}; font-size: 22px">+</span></summary>
+<p style="margin: 12px 0 0; color: #4A5568">Geofence and time restrictions are available for enterprise customers and are set per user in the iVALT Admin Panel. <a href="#">Contact our team</a> [CONTACT] to enable them.</p>
+</details>
+
+<details style="border-bottom: 1px solid #E3E6EB; padding: 20px 0">
+<summary style="font-size: 18px; font-weight: 600; display: flex; justify-content: space-between; gap: 16px; min-height: 44px; align-items: center">Can I remove iVALT later?<span aria-hidden="true" style="color: {{accent}}; font-size: 22px">+</span></summary>
+<p style="margin: 12px 0 0; color: #4A5568">Yes. Run <code style="font-family: 'IBM Plex Mono', monospace; background: #EEF1F5; padding: 2px 6px; border-radius: 4px">sacli --key "auth.module.post_auth_script" ConfigDel</code> then <code style="font-family: 'IBM Plex Mono', monospace; background: #EEF1F5; padding: 2px 6px; border-radius: 4px">sacli start</code>. Your original Access Server login keeps working.</p>
+</details>
+
+</div>
+</div>
+</section>
+
+<section style="background: #0E1726; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 80px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 10px; flex: 1 1 480px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em">Put a trusted human behind every VPN login.</h2>
+<p style="margin: 0; color: #C9D2E0; font-size: 18px">90 days free for OpenVPN Access Server customers.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<a href="#setup" style="background: {{accent}}; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 8px; font-weight: 600; font-size: 17px">Get started</a>
+<a href="https://www.ivalt.com/executive-briefing" style="color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 8px; font-weight: 600; font-size: 17px; border: 1px solid #44516A">Talk to our team</a>
+</div>
+</div>
+<div style="border-top: 1px solid #26324A">
+<div style="max-width: 1200px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #A9B4C6">
+<span>© 2026 iVALT</span>
+<span>OpenVPN and Access Server are trademarks of OpenVPN Inc.</span>
+</div>
+</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1D4ED8","options":["#1D4ED8","#0F766E","#7C3AED","#C2410C"]},"$preview":{"width":1440,"height":4800}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#1D4ED8' };
+}
+}
+</script>
+</body>
+</html>
